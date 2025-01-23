@@ -8,10 +8,10 @@
     <h3 class="text-center mb-4">Welcome back, @UserService.loggedInUserName!</h3>
 
     <input type="text"
-    class="form-control shadow-sm mt-3"
-    placeholder="Filter by transaction type."
-    @bind="searchTerm"
-    @oninput="ApplySearch"   />
+           class="form-control shadow-sm mt-3"
+           placeholder="Filter by transaction type."
+           @bind="searchTerm"
+           @oninput="ApplySearch"   />
 
     <div class="row mt-5">
         <!-- Credit Card -->
@@ -39,6 +39,12 @@
                                 <input type="text" class="form-control mb-3" @bind="Note" placeholder="Remarks">
                                 <button class="btn btn-primary" @onclick="SubmitCredit">Submit</button>
                                 <button class="btn btn-secondary" @onclick="HideInputField">Cancel</button>
+                                @if (ErrorMessage != string.Empty)
+                                {
+                                    <div class="alert alert-danger mt-3">
+                                        @ErrorMessage
+                                    </div>
+                                }
                             </div>
                         }
                     </div>
@@ -72,6 +78,12 @@
                                 <input type="text" class="form-control mb-3" @bind="Note" placeholder="Remarks">
                                 <button class="btn btn-primary" @onclick="SubmitDebit">Submit</button>
                                 <button class="btn btn-secondary" @onclick="HideInputFieldDebit">Cancel</button>
+                                @if (ErrorMessageDebit != string.Empty)
+                                {
+                                    <div class="alert alert-danger mt-3">
+                                        @ErrorMessageDebit
+                                    </div>
+                                }
                             </div>
                         }
                     </div>
@@ -100,6 +112,12 @@
                                 <button class="btn btn-primary" @onclick="SubmitDebt">Submit</button>
                                 <button class="btn btn-secondary" @onclick="HideInputFieldDept">Cancel</button>
                             </div>
+                            @if (ErrorMessageDebt != string.Empty)
+                            {
+                                <div class="alert alert-danger mt-3">
+                                    @ErrorMessageDebt
+                                </div>
+                            }
                         }
                     </div>
                 </div>
@@ -176,7 +194,7 @@
         }
         else
         {
-            if(NewDebit > CurrentUser.Credit)
+            if (NewDebit > CurrentUser.Credit)
             {
                 ErrorMessageDebit = "Your debit can't be greater than your credit";
             }

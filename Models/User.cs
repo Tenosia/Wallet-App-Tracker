@@ -10,8 +10,8 @@ namespace practice.Models
     public class User
     {
         public required string Username { get; set; }
-        public required string Password { get; set; } 
-         public required string Email { get; set; }
+        public required string Password { get; set; }
+        public required string Email { get; set; }
 
         public int Credit { get; set; } = 0;
 
@@ -19,7 +19,7 @@ namespace practice.Models
 
         public int Debt { get; set; } = 0;
 
-        public List<Transaction> Transactions { get; set; } = new List <Transaction>();
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
 
     }
 }

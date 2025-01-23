@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "esZ0mIK14BXQ5jDFneVKH0HJl/d7S9ZHLDbhUHykmuQ=",
+  "Hash": "iCFSr7c4Q+tUPKsE3OvdLCyeFSEUU+p/n+RE+SmsUWI=",
   "Source": "practice",
   "BasePath": "/",
   "Mode": "Root",
@@ -101,12 +101,12 @@
       "OriginalItemSpec": "D:\\ad coursework\\walletTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-6gzpyzhau4.gz",
+      "Identity": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-onz0gnhwa9.gz",
       "SourceId": "practice",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "css/bootstrap/bootstrap.min#[.{fingerprint=6gzpyzhau4}]?.css.gz",
+      "RelativePath": "css/bootstrap/bootstrap.min#[.{fingerprint=onz0gnhwa9}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -115,8 +115,8 @@
       "RelatedAsset": "D:\\ad coursework\\walletTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "joqzyw7ssu",
-      "Integrity": "LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=",
+      "Fingerprint": "ndpb6rys0q",
+      "Integrity": "xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\ad coursework\\walletTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "Fingerprint": "onz0gnhwa9",
+      "Integrity": "fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
@@ -295,7 +295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -348,7 +348,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -385,7 +385,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -432,7 +432,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -493,7 +493,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -538,7 +538,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -569,174 +569,13 @@
       ]
     },
     {
-      "Route": "css/bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-6gzpyzhau4.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000041844506"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23897"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrap/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "css/bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\ad coursework\\walletTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrap/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "css/bootstrap/bootstrap.min.6gzpyzhau4.css.gz",
-      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-6gzpyzhau4.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23897"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrap/bootstrap.min.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c="
-        }
-      ]
-    },
-    {
       "Route": "css/bootstrap/bootstrap.min.css",
-      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-6gzpyzhau4.gz",
+      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-onz0gnhwa9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000041844506"
+          "Quality": "0.000035807641"
         }
       ],
       "ResponseHeaders": [
@@ -746,15 +585,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23897"
+          "Value": "27926"
         },
         {
           "Name": "ETag",
-          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
+          "Value": "\"xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -774,13 +613,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "W/\"fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo="
         }
       ]
     },
@@ -795,7 +634,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "237349"
         },
         {
           "Name": "Content-Type",
@@ -803,11 +642,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -817,7 +656,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo="
         }
       ]
     },
@@ -984,7 +823,7 @@
     },
     {
       "Route": "css/bootstrap/bootstrap.min.css.gz",
-      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-6gzpyzhau4.gz",
+      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-onz0gnhwa9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -993,7 +832,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23897"
+          "Value": "27926"
         },
         {
           "Name": "Content-Type",
@@ -1001,11 +840,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
+          "Value": "\"xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 09:09:20 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1023,7 +862,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c="
+          "Value": "sha256-xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI="
         }
       ]
     },
@@ -1165,6 +1004,167 @@
       ]
     },
     {
+      "Route": "css/bootstrap/bootstrap.min.onz0gnhwa9.css",
+      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-onz0gnhwa9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000035807641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27926"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onz0gnhwa9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.onz0gnhwa9.css",
+      "AssetFile": "D:\\ad coursework\\walletTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onz0gnhwa9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fG/qG2sMbTS8kgWe35AVRrqY5J33gnTwy7GuRcDyPSo="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.onz0gnhwa9.css.gz",
+      "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\qy0quqqzev-onz0gnhwa9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Jan 2025 01:55:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onz0gnhwa9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xXiH5y3NDSaD8JYWdF2gpMWo5xUwA5Qxo04212aBksI="
+        }
+      ]
+    },
+    {
       "Route": "index.3jclexyx4f.html",
       "AssetFile": "D:\\ad coursework\\walletTracker\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\compressed\\lukbkd53wh-3jclexyx4f.gz",
       "Selectors": [
@@ -1189,7 +1189,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1250,7 +1250,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1295,7 +1295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1350,7 +1350,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1403,7 +1403,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1440,7 +1440,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 07:57:50 GMT"
+          "Value": "Thu, 23 Jan 2025 01:55:49 GMT"
         },
         {
           "Name": "Cache-Control",
