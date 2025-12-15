@@ -4,36 +4,50 @@ using System.Text.Json;
 using Microsoft.Maui.Controls;
 using practice.Models;
 
-public class UserService
+namespace practice.Services
 {
+    public class UserService
+    {
     private static readonly string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
     private static readonly string FolderPath = Path.Combine(DesktopPath, "LocalDB");
     private static readonly string FilePath = Path.Combine(FolderPath, "users.json");
     public string? loggedInUserName { get; set; }
 
     // Retrieve all transactions for a specific user
-    public List<practice.Models.Transaction> GetUserTransactions(string username)
+    public List<Transaction> GetUserTransactions(string username)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            return new List<Transaction>();
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
-        return user?.Transactions ?? new List<practice.Models.Transaction>();
+        return user?.Transactions ?? new List<Transaction>();
     }
 
     // Remove all transactions for a specific user
     public void ClearTransaction(string username)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            return;
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
         if (user != null)
         {
-            user.Transactions.Clear();
+            user.Transactions?.Clear();
             SaveUsers(users);
         }
     }
 
     // Increase credit balance and add a credit transaction
-    public void UpdateCredit(string username, int newCredit, string Tag, string note)
+    public void UpdateCredit(string username, int newCredit, string tag, string note)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ArgumentException("Username cannot be null or empty.", nameof(username));
+
+        if (newCredit <= 0)
+            throw new ArgumentException("Credit amount must be greater than zero.", nameof(newCredit));
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
         if (user != null)
@@ -51,8 +65,8 @@ public class UserService
                 Type = "Credit",
                 Amount = newCredit,
                 Description = $"Successfully added {newCredit} credits to the user account.",
-                Tag = Tag,
-                Note = note,
+                Tag = tag ?? string.Empty,
+                Note = note ?? string.Empty,
             });
 
             SaveUsers(users);
@@ -60,17 +74,23 @@ public class UserService
     }
 
     // Decrease credit balance and add a debit transaction
-    public void UpdateDebit(string username, int newDebit, string Tag, string note)
+    public void UpdateDebit(string username, int newDebit, string tag, string note)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ArgumentException("Username cannot be null or empty.", nameof(username));
+
+        if (newDebit <= 0)
+            throw new ArgumentException("Debit amount must be greater than zero.", nameof(newDebit));
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
         if (user != null)
         {
-            if (user.Credit >= newDebit)
-            {
-                user.Debit += newDebit;
-                user.Credit -= newDebit;
-            }
+            if (user.Credit < newDebit)
+                throw new InvalidOperationException("Insufficient credit balance.");
+
+            user.Debit += newDebit;
+            user.Credit -= newDebit;
 
             if (user.Transactions == null)
             {
@@ -83,8 +103,8 @@ public class UserService
                 Type = "Debit",
                 Amount = newDebit,
                 Description = $"Successfully debited {newDebit} from the user account.",
-                Tag = Tag,
-                Note = note,
+                Tag = tag ?? string.Empty,
+                Note = note ?? string.Empty,
             });
 
             SaveUsers(users);
@@ -92,8 +112,14 @@ public class UserService
     }
 
     // Add a new debt and update credit balance
-    public void UpdateDebt(string username, int newDebt, string Tag, string note)
+    public void UpdateDebt(string username, int newDebt, string tag, string note)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ArgumentException("Username cannot be null or empty.", nameof(username));
+
+        if (newDebt <= 0)
+            throw new ArgumentException("Debt amount must be greater than zero.", nameof(newDebt));
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
         if (user != null)
@@ -112,9 +138,8 @@ public class UserService
                 Type = "Debt",
                 Amount = newDebt,
                 Description = $"Successfully recorded a debt of {newDebt} to the user account.",
-                Tag = Tag,
-                Note = note,
-
+                Tag = tag ?? string.Empty,
+                Note = note ?? string.Empty,
             });
 
             SaveUsers(users);
@@ -155,10 +180,16 @@ public class UserService
     // Reset debit amount when user logs out
     public void ResetDebit(string username)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            return;
+
         var users = LoadUsers();
         var user = users.FirstOrDefault(u => u.Username == username);
-        user.Debit = 0;
-        SaveUsers(users);
+        if (user != null)
+        {
+            user.Debit = 0;
+            SaveUsers(users);
+        }
     }
 
     // Retrieve the currently logged-in user
@@ -198,6 +229,9 @@ public class UserService
     // Generate a SHA256 hash of a password
     public string HashPassword(string password)
     {
+        if (string.IsNullOrWhiteSpace(password))
+            throw new ArgumentException("Password cannot be null or empty.", nameof(password));
+
         using var sha256 = SHA256.Create();
         var bytes = Encoding.UTF8.GetBytes(password);
         var hash = sha256.ComputeHash(bytes);
@@ -207,7 +241,11 @@ public class UserService
     // Validate a password by comparing its hash to the stored hash
     public bool ValidatePassword(string inputPassword, string storedPassword)
     {
+        if (string.IsNullOrWhiteSpace(inputPassword) || string.IsNullOrWhiteSpace(storedPassword))
+            return false;
+
         var hashedInputPassword = HashPassword(inputPassword);
         return hashedInputPassword == storedPassword;
     }
+}
 }

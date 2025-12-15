@@ -14,7 +14,7 @@ namespace practice
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.Services.AddSingleton<UserService>();
+            builder.Services.AddSingleton<practice.Services.UserService>();
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG

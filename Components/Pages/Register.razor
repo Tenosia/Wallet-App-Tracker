@@ -2,7 +2,7 @@
 @using practice.Components.Layout
 @using practice.Models
 @layout FirstLayout
-@inject UserService UserService
+@inject practice.Services.UserService UserService
 @inject NavigationManager NavigationManager
 
 <style>
@@ -85,23 +85,42 @@
             return;
         }
 
+        if (RegisterPassword.Length < 6)
+        {
+            Message = "Password must be at least 6 characters long.";
+            return;
+        }
+
+        if (!string.IsNullOrWhiteSpace(RegisterEmail) && !RegisterEmail.Contains("@"))
+        {
+            Message = "Please enter a valid email address.";
+            return;
+        }
+
         if (Users.Any(u => u.Username == RegisterUsername))
         {
             Message = "User with this username already exists.";
             return;
         }
 
-        var newUser = new User
+        try
+        {
+            var newUser = new User
             {
                 Username = RegisterUsername,
                 Password = UserService.HashPassword(RegisterPassword),
-                Email = RegisterEmail
+                Email = RegisterEmail ?? string.Empty
             };
 
-        Users.Add(newUser);
-        UserService.SaveUsers(Users);
+            Users.Add(newUser);
+            UserService.SaveUsers(Users);
 
-        Message = "Signup successful, You are now being redirected to signin page...";
-        Task.Delay(1000).ContinueWith(_ => NavigationManager.NavigateTo("/"));
+            Message = "Signup successful, You are now being redirected to signin page...";
+            Task.Delay(1000).ContinueWith(_ => NavigationManager.NavigateTo("/"));
+        }
+        catch (Exception ex)
+        {
+            Message = $"Registration failed: {ex.Message}";
+        }
     }
 }

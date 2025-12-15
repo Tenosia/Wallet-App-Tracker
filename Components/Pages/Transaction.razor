@@ -1,7 +1,7 @@
 ﻿@page "/transaction"
 @using practice.Models
 @using System.Globalization
-@inject UserService UserService
+@inject practice.Services.UserService UserService
 @inject IJSRuntime JSRuntime
 
 <h3 class="text-center mt-4">Transaction History</h3>
@@ -69,10 +69,14 @@
                 </tr>
             </thead>
             <tbody>
+                @{
+                    int transactionId = 0;
+                }
                 @foreach (var transaction in filteredTransactions)
                 {
+                    transactionId++;
                     <tr>
-                        <td>@(++id)</td>
+                        <td>@transactionId</td>
                         <td>@transaction.Date.ToString("yyyy-MM-dd HH:mm:ss")</td>
                         <td>@transaction.Type</td>
                         <td>@transaction.Amount.ToString("C", new CultureInfo("us-US"))</td>
@@ -109,10 +113,14 @@
             </tr>
         </thead>
         <tbody>
+            @{
+                int highTransactionId = 0;
+            }
             @foreach (var transaction in filteredTransactions.Where(Transaction => Transaction.Amount > 10000))
             {
+                highTransactionId++;
                 <tr>
-                    <td>@(++id)</td>
+                    <td>@highTransactionId</td>
                     <td>@transaction.Date.ToString("yyyy-MM-dd HH:mm:ss")</td>
                     <td>@transaction.Type</td>
                     <td>@transaction.Amount.ToString("C", new CultureInfo("us-US"))</td>
@@ -138,10 +146,14 @@
             </tr>
         </thead>
         <tbody>
+            @{
+                int lowTransactionId = 0;
+            }
             @foreach (var transaction in filteredTransactions.Where(Transaction => Transaction.Amount < 500))
             {
+                lowTransactionId++;
                 <tr>
-                    <td>@(++id)</td>
+                    <td>@lowTransactionId</td>
                     <td>@transaction.Date.ToString("yyyy-MM-dd HH:mm:ss")</td>
                     <td>@transaction.Type</td>
                     <td>@transaction.Amount.ToString("C", new CultureInfo("us-US"))</td>
@@ -161,7 +173,6 @@
     private string selectedType = string.Empty;
     private string selectedTag = string.Empty;
     private bool isDateSortedAscending = true;
-    private int id { get; set; } = 0;
 
     protected override void OnInitialized()
     {

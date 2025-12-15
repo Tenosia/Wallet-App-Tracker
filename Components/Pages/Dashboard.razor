@@ -2,7 +2,7 @@
 @using practice.Models
 @using System.Globalization
 @inject NavigationManager NavigationManager
-@inject UserService UserService
+@inject practice.Services.UserService UserService
 
 <div class="container-fluid mt-4">
     <h3 class="text-center mb-4">Welcome back, @UserService.loggedInUserName!</h3>
@@ -109,6 +109,13 @@
                         {
                             <div class="mt-4">
                                 <input type="number" class="form-control mb-3" @bind="NewDebt" placeholder="Enter debt amount">
+                                <select class="form-select mb-3" @bind="TagDebt">
+                                    <option>Select a tag</option>
+                                    <option>Loan</option>
+                                    <option>Credit Card</option>
+                                    <option>Others</option>
+                                </select>
+                                <input type="text" class="form-control mb-3" @bind="NoteDebt" placeholder="Remarks">
                                 <button class="btn btn-primary" @onclick="SubmitDebt">Submit</button>
                                 <button class="btn btn-secondary" @onclick="HideInputFieldDept">Cancel</button>
                             </div>
@@ -142,8 +149,10 @@
     private bool IsInputVisibleDebit { get; set; } = false;
     private bool IsInputVisibleDebt { get; set; } = false;
     private string ErrorMessage { get; set; } = string.Empty;
-    private string Tag { get; set; }
-    private string Note { get; set; }
+    private string Tag { get; set; } = string.Empty;
+    private string Note { get; set; } = string.Empty;
+    private string TagDebt { get; set; } = string.Empty;
+    private string NoteDebt { get; set; } = string.Empty;
     private string ErrorMessageDebit { get; set; } = string.Empty;
     private string ErrorMessageDebt { get; set; } = string.Empty;
     private User? CurrentUser { get; set; }
@@ -170,11 +179,20 @@
     {
         if (NewCredit > 0)
         {
-            UserService.UpdateCredit(UserService.loggedInUserName, NewCredit, Tag, Note);
-            CurrentUser = UserService.GetLoggedInUser();
-            NewCredit = 0;
-            IsInputVisible = false;
-            ErrorMessage = string.Empty;
+            try
+            {
+                UserService.UpdateCredit(UserService.loggedInUserName, NewCredit, Tag, Note);
+                CurrentUser = UserService.GetLoggedInUser();
+                NewCredit = 0;
+                Tag = string.Empty;
+                Note = string.Empty;
+                IsInputVisible = false;
+                ErrorMessage = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = ex.Message;
+            }
         }
         else
         {
@@ -184,24 +202,33 @@
 
     private void SubmitDebit()
     {
-        if (NewDebit > 0 && NewDebit <= CurrentUser.Credit)
+        if (NewDebit > 0)
         {
-            UserService.UpdateDebit(UserService.loggedInUserName, NewDebit, Tag, Note);
-            CurrentUser = UserService.GetLoggedInUser();
-            NewDebit = 0;
-            IsInputVisibleDebit = false;
-            ErrorMessageDebit = string.Empty;
+            try
+            {
+                if (CurrentUser != null && NewDebit <= CurrentUser.Credit)
+                {
+                    UserService.UpdateDebit(UserService.loggedInUserName, NewDebit, Tag, Note);
+                    CurrentUser = UserService.GetLoggedInUser();
+                    NewDebit = 0;
+                    Tag = string.Empty;
+                    Note = string.Empty;
+                    IsInputVisibleDebit = false;
+                    ErrorMessageDebit = string.Empty;
+                }
+                else
+                {
+                    ErrorMessageDebit = "Your debit can't be greater than your credit";
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDebit = ex.Message;
+            }
         }
         else
         {
-            if (NewDebit > CurrentUser.Credit)
-            {
-                ErrorMessageDebit = "Your debit can't be greater than your credit";
-            }
-            else
-            {
-                ErrorMessageDebit = "Please enter debit amount in integer format and greater than 0.";
-            }
+            ErrorMessageDebit = "Please enter debit amount in integer format and greater than 0.";
         }
     }
 
@@ -209,15 +236,24 @@
     {
         if (NewDebt > 0)
         {
-            UserService.UpdateDebt(UserService.loggedInUserName, NewDebt, Tag, Note);
-            CurrentUser = UserService.GetLoggedInUser();
-            NewDebt = 0;
-            IsInputVisibleDebt = false;
-            ErrorMessageDebit = string.Empty;
+            try
+            {
+                UserService.UpdateDebt(UserService.loggedInUserName, NewDebt, TagDebt, NoteDebt);
+                CurrentUser = UserService.GetLoggedInUser();
+                NewDebt = 0;
+                TagDebt = string.Empty;
+                NoteDebt = string.Empty;
+                IsInputVisibleDebt = false;
+                ErrorMessageDebt = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessageDebt = ex.Message;
+            }
         }
         else
         {
-            ErrorMessageDebit = "Please enter debt amount in integer format and greater than 0.";
+            ErrorMessageDebt = "Please enter debt amount in integer format and greater than 0.";
         }
     }
 
